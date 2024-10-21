@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "244ecf1a-0754-49a8-be78-762094e422f2",
+		"name": "Convin-AI-API Docs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39134095"
+	},
+	"item": [
+		{
+			"name": "Register USER",
+			"request": {
+				"auth": {
+					"type": "jwt",
+					"jwt": [
+						{
+							"key": "algorithm",
+							"value": "HS256",
+							"type": "string"
+						},
+						{
+							"key": "isSecretBase64Encoded",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "payload",
+							"value": "{}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "headerPrefix",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "queryParamKey",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "header",
+							"value": "{}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\" : \"Achyuta Gupta\",\r\n  \"email\" : \"Achyuta@gmail.com\",\r\n  \"phone\" : \"890908249\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/register/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register",
+						"user"
+					]
+				},
+				"description": "Registers a new user."
+			},
+			"response": []
+		},
+		{
+			"name": "Expense ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\" : 1020,\r\n    \"purpose\" : \"party\",\r\n    \"split\" : {\"1\":40, \"2\":60 },\r\n    \"option\" : \"percentage\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/expense/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"expense",
+						"add"
+					]
+				},
+				"description": "Adds a new expense."
+			},
+			"response": []
+		},
+		{
+			"name": "Get USER ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/user?phone=7491811808",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "7491811808"
+						}
+					]
+				},
+				"description": "Fetches user details by email or phone."
+			},
+			"response": []
+		},
+		{
+			"name": "Individual Expense",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/expense/user?userId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"expense",
+						"user"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Fetches details of a specific expense by its ID."
+			},
+			"response": []
+		},
+		{
+			"name": "Overall Expenses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/expenses/overall",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"expenses",
+						"overall"
+					]
+				},
+				"description": "Fetches overall expenses for all users."
+			},
+			"response": []
+		},
+		{
+			"name": "Balance Sheet Export",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/generate-balance-sheet",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"generate-balance-sheet"
+					]
+				},
+				"description": "Generates a balance sheet for all users."
+			},
+			"response": []
+		}
+	]
+}
