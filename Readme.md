@@ -58,6 +58,6 @@
    ![Balance Sheet](/Testing_images/Balance.png)
 
 7. Report (PDF)
-   ![Report](/reports/Report.pdf)
+   ![Report](/reports/Report.jpg)
 
 
