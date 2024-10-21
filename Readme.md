@@ -37,7 +37,7 @@
 
 ### Example Images:
 1. Register
-   ![Register](![alt text](Testing_images\Register.png))
+   ![Register](![alt text](/Testing_images/Register.png))
 
 2. Retrieve User
    ![Retrieve User](Testing_images\getUser.png)
